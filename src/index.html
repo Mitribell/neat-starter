@@ -1,22 +1,25 @@
 ---
 layout: default
-title: Neat Starter
+title: Dmytro Bilopolskyi
 path: home
 ---
 
-<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
-  <h1>
-    Welcome to
-    <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-      {{title}}
-    </strong>
-  </h1>
-
-  <p>
-    <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>
-    Starter Template. Get Started by editing.
-    <code class="bg-gray-100 text-blue-800 p-1">/index.njk</code>
-  </p>
-
-  {% include "./_includes/partials/content.html" %}
+<div class="mt-8 lg:mt-24 px-6 w-full">
+  <div class="container grid grid-cols-1 lg:grid-cols-4 gap-4">
+    <h1 class="col-span-1 lg:col-span-2">
+      Дмитро Бєлопольський — арт-директор, графічний дизайнер, викладач,
+      спекулятивний мислитель і дослідник технологій.      
+      Його практика — на перетині візуальної айдентики, алгоритмічної естетики та філософії сучасності.
+    </h1>
+    <p class="col-span-1 text-xs">
+      Він розвиває власну креативну студію Нос та викладає у School of Visual
+      Communication. Вкорінений в українському культурному ґрунті, Дмитро працює
+      в дусі метамодернізму — між логікою коду й інтуїцією жесту, між
+      раціональним сітковим мисленням і живим емоційним візуалом. Він сприймає
+      брендинг як форму оповіді, як спосіб будувати світи. Його інструменти —
+      від Figma до Blender, від штучного інтелекту до p5.js, від метавсесвіту до
+      маркера на папері.
+    </p>
+  </div>
+  {% include "./_includes/partials/postlist.html" %}
 </div>

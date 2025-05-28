@@ -3,13 +3,30 @@
 @tailwind utilities;
 
 /*Your Custom CSS Goes here*/
-
-h1 {
-  @apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
+/* Defaults */
+:root {
+  --font-family: "inter", helvetica, arial, sans-serif;
+  --font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono,
+    Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New,
+    Courier, monospace;
 }
 
+/* Global stylesheet */
+body {
+  font-family: var(--font-family);
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+h1 {
+  @apply lowercase text-lg tracking-tighter mb-3 text-left lg:text-3xl;
+}
 h3 {
   @apply text-2xl font-bold mb-3;
+}
+h4 {
+  @apply text-xl font-bold mb-3;
 }
 
 /* Syntax Highlighting*/

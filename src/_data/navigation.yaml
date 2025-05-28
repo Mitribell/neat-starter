@@ -1,10 +1,10 @@
 ---
 items:
-  - text: Menu One
+  - text: Identity
     url: "#"
-  - text: Menu Two
+  - text: Experiment
     url: "#"
-  - text: Menu Three
+  - text: Code
     url: "#"
   - text: Blog
     url: "/blog"

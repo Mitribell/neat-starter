@@ -3,19 +3,25 @@ layout: default
 prism: true
 ---
 
-<div class="container max-w-4xl mt-6  px-6">
-    <div class="pb-5 mb-5 border-b border-gray-100">
-        <h1 class="font-bold text-5xl">{{title}}</h1>
-        <p class="text-center text-base leading-6 font-medium text-gray-500">
-            <time> {{ date | readableDate }}
-                by
-                <a>{{ author }}</a>
-
-            </time>
-        </p>
-
+<div class="mt-24 w-full px-6">
+  <section class="container grid-cols-1 grid md:grid-cols-3 lg:grid-cols-4 gap-8">
+    <div class="col-span-1 lg:col-span-2">
+      <h1>{{ title }}</h1>
     </div>
-    <article class="prose lg:prose-xl my-4 mx-auto">
-        {{ content | safe }}</article>
-
+    <div class="col-span-1"><p>{{description | safe }}</p></div>
+    <div class="col-span-1">
+      <p>
+        <time> {{ date | readableDate }} </time>
+      </p>
+      <p class="text-gray-500">
+        {%- for tag in tags | filterTagList %} {%- set tagUrl %}/tags/{{ tag |
+        slugify }}/{% endset %}
+        <a href="{{ tagUrl }}">{{ tag }}</a>
+        {%- if not loop.last %}, {% endif %} {%- endfor %}
+      </p>
+    </div>
+  </section>
+  <section class="container flex mt-14 gap-4">
+    <div class="prose">{{ content | safe }}</div>
+  </section>
 </div>
