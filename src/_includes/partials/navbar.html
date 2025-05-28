@@ -1,5 +1,5 @@
 <header
-  class="lg:fixed py-5 px-6 border-b-2 backdrop-blur-sm w-full bg-white/50 top-0"
+  class="lg:fixed py-5 px-6 border-b-2 backdrop-blur-sm w-full bg-white/50 top-0 z-10"
 >
   <nav
     class="container flex items-start lg:justify-between flex-wrap mx-auto"
@@ -51,10 +51,10 @@
         class="pt-6 lg:pt-0 list-reset lg:flex justify-start flex-1 items-start"
       >
         {% for item in navigation.items %}
-        <li class="nav__item mr-3">
+        <li class="nav__item ml-5">
           <a
             @click="isOpen = false"
-            class="text-ml inline-block text-gray-500 no-underline hover:text-indigo-500 py-0"
+            class="text-2xl lowercase inline-block hover:font-bold"
             href="{{ item.url }}"
             >{{ item.text }}</a
           >
