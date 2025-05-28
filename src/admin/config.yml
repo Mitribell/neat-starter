@@ -29,7 +29,7 @@ collections:
         name: "tags"
         multiple: true
         create: true
-        options: ["Tags", "created", "from", "config.yml"]
+        options: ["експеримент", "архітектура", "метавсесвіт", "SVC", "генеративний дизайн"]
   - label: "Settings"
     name: "settings"
     editor:
