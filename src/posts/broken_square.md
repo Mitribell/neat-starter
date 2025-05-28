@@ -1,9 +1,13 @@
 ---
-title: "Зламаність квадратів"
-meta: "Процес створення бренду"
-date: "2025-05-01"
-tags: ["Експеримент", "Генеративний дизайн"]
-image: "/static/img/brokensquare.png"
+title: Зламаність квадратів
+meta: Процес створення бренду
+date: 2025-05-01
+tags:
+  - Експеримент
+  - Генеративний дизайн
+image: /static/img/brokensquare.png
+description: Процес створення бренду
+author: Дмитро
 ---
 <div class="p5-container" id="p5-container"></div>
 
