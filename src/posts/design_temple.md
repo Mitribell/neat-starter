@@ -1,12 +1,14 @@
 ---
-title: "Храм дизайну"
-description: "Простір у метавсесвіті для проведення випусків та демонстрації робіт випускників School of Visual Communication"
+title: Храм дизайну
+description: Простір у метавсесвіті для проведення випусків та демонстрації
+  робіт випускників School of Visual Communication
 date: 2025-05-09
-tags: 
-    - Метавсесвіт
-    - Архітектура
-    - SVC
-image: "/static/img/svcTemple.png"
+tags:
+  - SVC
+  - архітектура
+  - метавсесвіт
+image: /static/img/svcTemple.png
+author: Дмитро
 ---
 
 <div><img src={{image}} alt="SVC Temple">
