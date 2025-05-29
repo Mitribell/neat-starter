@@ -31,4 +31,4 @@ tags:
   autoplay
   muted
   playsinline
-  class="rounded-xl w-full my-8"
+  class="rounded-xl w-full my-8">
