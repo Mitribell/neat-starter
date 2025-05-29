@@ -8,7 +8,7 @@ tags:
 ---
 ![](/static/img/comfy-titlep1.jpg)
 
-**Nos** вривається з новим крутезним кейсом  разом із Comfy.
+**Nos** вривається з новим крутезним кейсом разом із Comfy.
 
 Нашим завданням була **креативна ідея** для відкриття нового магазину у Дніпрі.
 
@@ -21,6 +21,14 @@ tags:
 
 Ідея дуже добре скалалсь у серію віжуалів з описом механіки, що задіяна на відкритті.
 
-![](/static/img/comfy-board3.jpg)
+![comfy-board-opening](/static/img/comfy-board.jpg "Борд відкриття Комфі")
 
-![](/static/img/comfy-board2.jpg)
+![comfy-board-presents](/static/img/comfy-board3.jpg "Борд подарунки Комфі")
+
+![comfy-board-discount](/static/img/comfy-board2.jpg "Борд знижки Комфі")
+
+<video src="/static/img/comfy-20s_відкриття.mp4" poster="/static/img/nikoly-ne-bulo_video1.jpg" controls autoplay muted playsinline class="rounded-xl w-full my-8"></video>
+
+<video src="/static/img/6s-znyzhky.mp4" poster="static/img/nikoly-ne-bulo_video2.jpg" controls autoplay muted playsinline class="rounded-xl w-full my-8"></video>
+
+<video src="/static/img/6s-podarunky.mp4" poster="static/img/nikoly-ne-bulo_video3.jpg" controls autoplay muted playsinline class="rounded-xl w-full my-8"></video>
