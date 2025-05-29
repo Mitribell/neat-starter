@@ -26,7 +26,7 @@ tags:
 ![](/static/img/comfy-board2.jpg)
 
 <video
-  src="/static/video/mariupol.mp4"
+  src="src/static/img/6s-podarunky.mp4"
   controls
   autoplay
   muted
