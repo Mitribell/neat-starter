@@ -25,7 +25,7 @@ tags:
 
 ![](/static/img/comfy-board2.jpg)
 <video
-  src="src/static/img/6s-podarunky.mp4"
+  src="/static/img/6s-podarunky.mp4"
   controls
   autoplay
   muted
