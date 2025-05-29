@@ -5,7 +5,6 @@ const htmlmin = require("html-minifier");
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 const markdownIt = require("markdown-it");
 
-
 module.exports = function (eleventyConfig) {
   // Add a custom filter to format quotes
   const options = {
@@ -32,11 +31,17 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addCollection("experiment", function (collection) {
-    return collection.getFilteredByTag("experiment").sort((a, b) => b.date - a.date);
+    return collection
+      .getFilteredByTag("experiment")
+      .sort((a, b) => b.date - a.date);
   });
 
   eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
-    return (tags || []).filter((tag) => ["all", "posts"].indexOf(tag) === -1);
+    return (tags || []).filter(
+      (tag) =>
+        ["all", "posts", "post", "work", "experiment", "code"].indexOf(tag) ===
+        -1
+    );
   });
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
