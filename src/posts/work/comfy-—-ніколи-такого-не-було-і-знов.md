@@ -22,13 +22,3 @@ tags:
 Ідея дуже добре скалалсь у серію віжуалів з описом механіки, що задіяна на відкритті.
 
 ![](/static/img/comfy-board3.jpg)
-
-![](/static/img/comfy-board2.jpg)
-
-<video
-  src="img/6s-podarunky.mp4"
-  controls
-  autoplay
-  muted
-  playsinline
-  class="rounded-xl w-full my-8">
