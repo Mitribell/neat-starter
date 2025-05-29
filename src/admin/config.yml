@@ -20,7 +20,7 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Preview", name: "preview-img", widget: "image" }
+      - { label: "Preview", name: "previewImg", widget: "image" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }

@@ -1,5 +1,5 @@
 ---
-preview-img: /static/img/comfy-titlep1.jpg
+previewImg: /static/img/comfy-titlep1.jpg
 title: Comfy — ніколи такого не було, і знов
 description: креативна ідея, ключові віжуали для зовнішьої реклами, діджитал та
   анімовані відео.
