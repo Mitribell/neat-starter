@@ -2,7 +2,30 @@
 layout: default
 prism: true
 ---
-<img src="{{ previewImg }}" alt="{{ title }}" class="w-full mb-8" />  
+
+<!-- <picture class="block mb-8 w-full">
+  
+  <source
+    srcset="{{ previewImgV }}"
+    media="(max-width: 767px)"
+  />
+  
+  <source
+    srcset="{{ previewImgH }}"
+    media="(min-width: 768px)"
+  />
+  
+  <img
+    src="{{ previewImgH }}"
+    alt="{{ title }}"
+    class="w-full"
+    loading="lazy"
+    decoding="async"
+  />
+</picture> -->
+
+<img src="{{ previewImgV }}" alt="{{ title }}" class="w-full mb-8 block md:hidden" />  
+<img src="{{ previewImgH }}" alt="{{ title }}" class="w-full md:visible hidden md:block" />
 <div class="my-8 w-full px-6">  
   <section class="container mt-14">
     {{ content | safe }}
