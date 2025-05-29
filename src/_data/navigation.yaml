@@ -6,5 +6,3 @@ items:
     url: "/experiment"
   - text: Code
     url: "/code"
-  - text: Blog
-    url: "/blog"

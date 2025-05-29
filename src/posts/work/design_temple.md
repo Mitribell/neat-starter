@@ -7,7 +7,7 @@ tags:
   - SVC
   - архітектура
   - метавсесвіт
-image: /static/img/svcTemple.png
+previewImg: /static/img/svcTemple.png
 author: Дмитро
 ---
 <img src={{image}} alt="SVC Temple">

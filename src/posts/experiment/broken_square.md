@@ -1,11 +1,10 @@
 ---
 title: Зламаність квадратів
-meta: Процес створення бренду
 date: 2025-05-01
 tags:
   - експеримент
   - генеративний дизайн
-image: /static/img/brokensquare.png
+previewImg: /static/img/brokensquare.png
 description: Процес створення бренду
 author: Дмитро
 ---
