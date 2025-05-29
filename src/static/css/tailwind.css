@@ -33,7 +33,7 @@ h4 {
   @apply text-lg;
 }
 img {
-  @apply block opacity-90 border rounded-lg;  
+  @apply block w-full opacity-90 border rounded-lg;  
 }
 
 @layer utilities {

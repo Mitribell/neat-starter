@@ -1,5 +1,16 @@
 module.exports = {
   content: ["./src/**/*.html", "./public/**/*.html"],
+  safelist: [
+    "my-0",
+    "my-1",
+    "my-2",
+    "my-3",
+    "my-4",
+    "my-5",
+    "my-6",
+    "my-7",
+    "my-8",
+  ],
   theme: {
     container: {
       center: true,

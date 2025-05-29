@@ -34,11 +34,11 @@ module.exports = function (eleventyConfig) {
         const alt = imgToken.content;
         const titleAttr = imgToken.attrs.find((attr) => attr[0] === "title");
         const caption = titleAttr
-          ? `<figcaption>${titleAttr[1]}</figcaption>`
+          ? `<figcaption class="hidden md:visible text-xs">${titleAttr[1]}</figcaption>`
           : "";
 
         const figureHtml = `
-<figure>
+<figure class="my-4">
   <img src="${src}" alt="${alt}">
   ${caption}
 </figure>`.trim();

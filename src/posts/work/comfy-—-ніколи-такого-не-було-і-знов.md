@@ -27,8 +27,10 @@ tags:
 
 ![comfy-board-discount](/static/img/comfy-board2.jpg "Борд знижки Комфі")
 
-<video src="/static/img/comfy-20s_відкриття.mp4" poster="/static/img/nikoly-ne-bulo_video1.jpg" controls autoplay muted playsinline class="rounded-xl w-full my-8"></video>
+Для промо-кампанії у Youtube ми розробили веселий та динамічний анімаційний ролик. Ми вклали життя у побутові прилади та змусили фен видувати повітря крізь губи, праску біжати за подарунками, а міксер ловити знижки буквально на льоту.
 
-<video src="/static/img/6s-znyzhky.mp4" poster="static/img/nikoly-ne-bulo_video2.jpg" controls autoplay muted playsinline class="rounded-xl w-full my-8"></video>
+<video src="/static/img/comfy-20s_відкриття.mp4" poster="/static/img/nikoly-ne-bulo_video1.jpg" controls autoplay loop muted playsinline class="rounded-xl w-full my-0"></video>
 
-<video src="/static/img/6s-podarunky.mp4" poster="static/img/nikoly-ne-bulo_video3.jpg" controls autoplay muted playsinline class="rounded-xl w-full my-8"></video>
+<video src="/static/img/6s-znyzhky.mp4" poster="/static/img/nikoly-ne-bulo_video2.jpg" controls autoplay loop muted playsinline class="rounded-xl w-full my-0"></video>
+
+<video src="/static/img/6s-podarunky.mp4" poster="/static/img/nikoly-ne-bulo_video3.jpg" controls autoplay loop muted playsinline class="rounded-xl w-full my-0"></video>
