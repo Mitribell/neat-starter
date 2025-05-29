@@ -21,7 +21,7 @@ p {
   @apply prose text-base text-dark mx-auto py-2;
 }
 h1 {
-  @apply lowercase text-3xl leading-tight text-dark;
+  @apply lowercase text-4xl leading-tight text-dark;
 }
 h2 {
   @apply text-2xl leading-snug text-dark;

@@ -15,12 +15,14 @@ collections:
   - label: "Work"
     name: "work"
     folder: "src/posts/work"
+    slug: "{{slug}}"
     create: true
     editor:
       preview: false
     fields:
+      - { label: "Preview", name: "preview-img", widget: "image" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }      
+      - { label: "Description", name: "description", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
       - widget: select
@@ -28,7 +30,15 @@ collections:
         name: "tags"
         multiple: true
         create: true
-        options: ["експеримент", "архітектура", "метавсесвіт", "SVC", "генеративний дизайн"]
+        options:
+          [
+            "Нос",
+            "Моушн Дизайн",
+            "Айдентика",
+            "Реклама",
+            "Пакування",
+            "Шрифт"
+          ]
   - label: "Settings"
     name: "settings"
     editor:
