@@ -1,5 +1,5 @@
 <header
-  class="lg:fixed py-5 px-6 border-b-2 backdrop-blur-sm w-full bg-white/50 top-0 z-10"
+  class="fixed py-5 px-4 border-b-2 backdrop-blur-sm w-full bg-white/50 top-0 z-10"
 >
   <nav
     class="container flex items-start lg:justify-between flex-wrap mx-auto"
@@ -16,7 +16,7 @@
     <button
       @click="isOpen = !isOpen"
       type="button"
-      class="ml-auto block lg:hidden px-2 text-primary-500 hover:text-primary-500 focus:outline-none focus:text-primary-500"
+      class="ml-auto block lg:hidden text-primary-500 hover:text-primary-500 focus:outline-none focus:text-primary-500"
       :class="{ 'transition transform-180': isOpen }"
       aria-label="Menu"
     >
