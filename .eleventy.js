@@ -38,8 +38,8 @@ module.exports = function (eleventyConfig) {
           : "";
 
         const figureHtml = `
-<figure class="my-8">
-  <img src="${src}" alt="${alt}" class="w-full rounded-xl shadow-md" loading="lazy" decoding="async">
+<figure>
+  <img src="${src}" alt="${alt}">
   ${caption}
 </figure>`.trim();
 
