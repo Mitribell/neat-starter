@@ -16,8 +16,41 @@ module.exports = function (eleventyConfig) {
   };
 
   const md = markdownIt(options);
-  eleventyConfig.setLibrary("md", md);
+  md.core.ruler.after("inline", "unwrap-image-paragraph", function (state) {
+    const tokens = state.tokens;
 
+    for (let i = 0; i < tokens.length - 2; i++) {
+      const isImageParagraph =
+        tokens[i].type === "paragraph_open" &&
+        tokens[i + 1].type === "inline" &&
+        tokens[i + 1].children &&
+        tokens[i + 1].children.length === 1 &&
+        tokens[i + 1].children[0].type === "image" &&
+        tokens[i + 2].type === "paragraph_close";
+
+      if (isImageParagraph) {
+        const imgToken = tokens[i + 1].children[0];
+        const src = imgToken.attrs.find((attr) => attr[0] === "src")[1];
+        const alt = imgToken.content;
+        const titleAttr = imgToken.attrs.find((attr) => attr[0] === "title");
+        const caption = titleAttr
+          ? `<figcaption>${titleAttr[1]}</figcaption>`
+          : "";
+
+        const figureHtml = `
+<figure class="my-8">
+  <img src="${src}" alt="${alt}" class="w-full rounded-xl shadow-md" loading="lazy" decoding="async">
+  ${caption}
+</figure>`.trim();
+
+        // Заміна трьох токенів одним
+        const htmlToken = new state.Token("html_block", "", 0);
+        htmlToken.content = figureHtml;
+
+        tokens.splice(i, 3, htmlToken);
+      }
+    }
+  });
   eleventyConfig.addCollection("posts", function (collection) {
     return collection.getFilteredByTag("post").sort((a, b) => b.date - a.date);
   });
@@ -114,7 +147,7 @@ module.exports = function (eleventyConfig) {
 
     return content;
   });
-
+  eleventyConfig.setLibrary("md", md);
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk
   return {

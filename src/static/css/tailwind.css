@@ -18,7 +18,7 @@ body {
 }
 
 p {
-  @apply text-base text-dark max-w-prose mx-auto py-2;
+  @apply prose text-base text-dark mx-auto py-2;
 }
 h1 {
   @apply lowercase text-3xl leading-tight text-dark;
@@ -36,6 +36,15 @@ img {
   @apply block opacity-90 border rounded-lg;  
 }
 
+@layer utilities {
+  .prose img {
+    @apply w-full my-8;
+  }
+
+  .prose p:has(img) {
+    @apply w-full max-w-none mx-auto;
+  }
+}
 /* Syntax Highlighting*/
 
 body :not(pre) > code[class*="language-"],
