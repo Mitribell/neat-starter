@@ -1,10 +1,10 @@
 ---
 items:
-  - text: Identity
-    url: "#"
+  - text: Work
+    url: "/work"
   - text: Experiment
-    url: "#"
+    url: "/experiment"
   - text: Code
-    url: "#"
+    url: "/code"
   - text: Blog
     url: "/blog"

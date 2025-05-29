@@ -15,18 +15,25 @@
 /* Global stylesheet */
 body {
   font-family: var(--font-family);
-  font-size: 15px;
-  line-height: 1.2;
 }
 
-h1 {
-  @apply lowercase text-lg tracking-tighter mb-3 text-left lg:text-3xl;
+p {
+  @apply text-base text-dark max-w-prose mx-auto py-2;
 }
+h1 {
+  @apply lowercase text-3xl leading-tight text-dark;
+}
+h2 {
+  @apply text-2xl leading-snug text-dark;
+}  
 h3 {
-  @apply text-2xl font-bold mb-3;
+  @apply text-xl font-medium leading-snug text-olive;
 }
 h4 {
-  @apply text-xl font-bold mb-3;
+  @apply text-lg;
+}
+img {
+  @apply block opacity-90 border rounded-lg;  
 }
 
 /* Syntax Highlighting*/

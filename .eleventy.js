@@ -2,8 +2,38 @@ const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
+const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+const markdownIt = require("markdown-it");
+
 
 module.exports = function (eleventyConfig) {
+  // Add a custom filter to format quotes
+  const options = {
+    html: true, // дозволяє HTML у Markdown
+    breaks: true, // переносить рядки як <br>
+    linkify: true, // перетворює URL у посилання
+    typographer: true, // ← Увімкнено "розумні лапки", тире тощо
+    quotes: "«»“”", // ← перші дві — основні лапки, другі — fallback
+  };
+
+  const md = markdownIt(options);
+  eleventyConfig.setLibrary("md", md);
+
+  eleventyConfig.addCollection("posts", function (collection) {
+    return collection.getFilteredByTag("post").sort((a, b) => b.date - a.date);
+  });
+
+  eleventyConfig.addCollection("code", function (collection) {
+    return collection.getFilteredByTag("code").sort((a, b) => b.date - a.date);
+  });
+
+  eleventyConfig.addCollection("work", function (collection) {
+    return collection.getFilteredByTag("work").sort((a, b) => b.date - a.date);
+  });
+
+  eleventyConfig.addCollection("experiment", function (collection) {
+    return collection.getFilteredByTag("experiment").sort((a, b) => b.date - a.date);
+  });
 
   eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
     return (tags || []).filter((tag) => ["all", "posts"].indexOf(tag) === -1);
@@ -19,6 +49,26 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
       "dd LLL yyyy"
     );
+  });
+
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    // Output formats for each image.
+    formats: ["avif", "webp", "auto"],
+
+    // widths: ["auto"],
+
+    failOnError: false,
+    htmlOptions: {
+      imgAttributes: {
+        // e.g. <img loading decoding> assigned on the HTML tag will override these values.
+        loading: "lazy",
+        decoding: "async",
+      },
+    },
+
+    sharpOptions: {
+      animated: true,
+    },
   });
 
   // Syntax Highlighting for Code blocks
@@ -67,5 +117,5 @@ module.exports = function (eleventyConfig) {
       input: "src",
     },
     htmlTemplateEngine: "njk",
-  };  
+  };
 };

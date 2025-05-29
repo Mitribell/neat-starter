@@ -3,14 +3,14 @@ layout: default
 prism: true
 ---
 
-<div class="mt-24 w-full px-6">
-  <section class="container grid-cols-1 grid md:grid-cols-3 lg:grid-cols-4 gap-8">
+<div class="mt-8 lg:mt-24 w-full px-6">
+  <section class="container grid-cols-1 grid md:grid-cols-3 lg:grid-cols-4 gap-4">
     <div class="col-span-1 lg:col-span-2">
       <h1>{{ title }}</h1>
     </div>
     <div class="col-span-1"><p>{{description | safe }}</p></div>
     <div class="col-span-1">
-      <p>
+      <p class="text-gray-500">
         <time> {{ date | readableDate }} </time>
       </p>
       <p class="text-gray-500">
@@ -21,7 +21,7 @@ prism: true
       </p>
     </div>
   </section>
-  <section class="container flex mt-14 gap-4">
-    <div class="prose">{{ content | safe }}</div>
+  <section class="container mt-14">
+    {{ content | safe }}
   </section>
 </div>
