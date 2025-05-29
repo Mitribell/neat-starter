@@ -24,3 +24,11 @@ tags:
 ![](/static/img/comfy-board3.jpg)
 
 ![](/static/img/comfy-board2.jpg)
+
+<video
+  src="/static/video/mariupol.mp4"
+  controls
+  autoplay
+  muted
+  playsinline
+  class="rounded-xl w-full my-8"
