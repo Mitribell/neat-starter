@@ -24,7 +24,6 @@ tags:
 ![](/static/img/comfy-board3.jpg)
 
 ![](/static/img/comfy-board2.jpg)
-
 <video
   src="src/static/img/6s-podarunky.mp4"
   controls
