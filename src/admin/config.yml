@@ -16,8 +16,9 @@ collections:
     name: "work"
     folder: "src/posts/work"
     create: true
+    slug: "{{fields.title | slug}}"
     editor:
-    preview: false
+      preview: false
     fields:
       - { label: "Preview Horizontal", name: "previewImg", widget: "image" }
       - { label: "Preview Vertical", name: "previewImgV", widget: "image" }
