@@ -16,13 +16,14 @@ collections:
     name: "work"
     folder: "src/posts/work"
     create: true
-    slug: "{{fields.title | slug}}"
+    slug: "{{fields.filename | slug}}"
     editor:
       preview: false
     fields:
       - { label: "Preview Horizontal", name: "previewImg", widget: "image" }
       - { label: "Preview Vertical", name: "previewImgV", widget: "image" }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "File Name", name: "filename", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
