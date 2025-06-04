@@ -4,13 +4,13 @@
 >
   {%- for post in postslist %}
   <a href="{{ post.url }}">
-    <img src="{{ post.data.previewImgH | url }}" alt="{{ post.data.title }}" />
+    <img src="{{ post.data.previewImg | url }}" alt="{{ post.data.title }}" />
     <h4 class="my-2">
       {% if post.data.title %} {{ post.data.title }} {% else %}
       <code>{{ post.url }}</code>
       {% endif %}
     </h4>
-    <p class="text-xs m-0 p-0 text-gray-500">
+    <p class="text-xs m-0 p-0 text-gray-500 hidden md:block">
       {% if post.data.description %} {{ post.data.description }} {% else %}
       <code>{{ post.url }}</code>
       {% endif %}

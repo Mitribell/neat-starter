@@ -4,18 +4,53 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 const markdownIt = require("markdown-it");
+const markdownItAttrs = require("markdown-it-attrs");
+
+// This function removes the <p> tags around <video> elements in Markdown
+function removeParagraphAroundVideo(md) {
+  const defaultRender =
+    md.renderer.rules.html_inline ||
+    function (tokens, idx, options, env, self) {
+      return self.renderToken(tokens, idx, options);
+    };
+
+  md.renderer.rules.html_inline = function (tokens, idx, options, env, self) {
+    const content = tokens[idx].content.trim();
+
+    if (content.startsWith("<video") && content.endsWith("</video>")) {
+      // Позначаємо цей токен як block-level
+      tokens[idx].type = "html_block";
+      tokens[idx].block = true;
+    }
+
+    return defaultRender(tokens, idx, options, env, self);
+  };
+
+  // Додатково видаляємо <p> навколо <video> у постобробці
+  const original = md.renderer.render;
+  md.renderer.render = function (tokens, options, env) {
+    let result = original.call(this, tokens, options, env);
+
+    // Видаляємо <p> якщо вони обгортають єдине <video>
+    result = result.replace(/<p>\s*(<video[\s\S]*?<\/video>)\s*<\/p>/g, "$1");
+
+    return result;
+  };
+}
 
 module.exports = function (eleventyConfig) {
   // Add a custom filter to format quotes
   const options = {
     html: true, // дозволяє HTML у Markdown
-    breaks: true, // переносить рядки як <br>
+    // breaks: true, // переносить рядки як <br>
     linkify: true, // перетворює URL у посилання
     typographer: true, // ← Увімкнено "розумні лапки", тире тощо
     quotes: "«»“”", // ← перші дві — основні лапки, другі — fallback
   };
 
-  const md = markdownIt(options);
+  const md = markdownIt(options)
+    .use(markdownItAttrs)
+    .use(removeParagraphAroundVideo);
   md.core.ruler.after("inline", "unwrap-image-paragraph", function (state) {
     const tokens = state.tokens;
 
@@ -34,7 +69,7 @@ module.exports = function (eleventyConfig) {
         const alt = imgToken.content;
         const titleAttr = imgToken.attrs.find((attr) => attr[0] === "title");
         const caption = titleAttr
-          ? `<figcaption class="hidden md:visible text-xs">${titleAttr[1]}</figcaption>`
+          ? `<figcaption class="hidden md:block text-xs">${titleAttr[1]}</figcaption>`
           : "";
 
         const figureHtml = `
@@ -51,6 +86,12 @@ module.exports = function (eleventyConfig) {
       }
     }
   });
+
+  // Додати короткий код для відео
+  eleventyConfig.addShortcode("video", function (src, type = "video/mp4") {
+    return `<video src="${src}" type="${type}" autoplay muted loop playsinline controls></video>`;
+  });
+
   eleventyConfig.addCollection("posts", function (collection) {
     return collection.getFilteredByTag("post").sort((a, b) => b.date - a.date);
   });

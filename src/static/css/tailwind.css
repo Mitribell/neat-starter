@@ -15,16 +15,17 @@
 /* Global stylesheet */
 body {
   font-family: var(--font-family);
+  @apply bg-milk text-dark;
 }
 
 p {
   @apply prose text-base text-dark mx-auto py-2;
 }
 h1 {
-  @apply lowercase text-4xl leading-tight text-dark;
+  @apply lowercase text-4xl text-dark;
 }
 h2 {
-  @apply text-2xl leading-snug text-dark;
+  @apply prose text-2xl leading-snug text-dark py-10;
 }  
 h3 {
   @apply text-xl font-medium leading-snug text-olive;
@@ -33,7 +34,10 @@ h4 {
   @apply text-lg;
 }
 img {
-  @apply block w-full opacity-90 border rounded-lg;  
+  @apply block opacity-90 border rounded-lg;  
+}
+video {
+  @apply block opacity-90 border rounded-lg w-full my-4;
 }
 
 @layer utilities {
