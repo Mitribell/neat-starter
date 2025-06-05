@@ -43,10 +43,10 @@ NOS-аналіз показав, що люди в цілому не розумі
 
 ![Vo Cards](/static/img/typeface.jpg "Vo Cards")
 
-{﻿% columns %}
+{% columns %}
 ![Vo Tote Bag](/static/img/vo-shopper.jpg "Vo Tote Bag")
 
 ![Vo T-shirt](/static/img/vo-tshirt.jpg "Vo T-shirt")
-{﻿% endcolumns %}
+{% endcolumns %}
 
 ![Vo Posters](/static/img/vo-posters.jpg "Vo Posters")
