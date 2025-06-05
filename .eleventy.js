@@ -92,6 +92,19 @@ module.exports = function (eleventyConfig) {
     return `<video src="${src}" type="${type}" autoplay muted loop playsinline controls></video>`;
   });
 
+  // Короткий код для 2 колонок
+  eleventyConfig.addPairedShortcode("columns", (content) => {
+    // Розбити текст по --- як роздільник
+    const parts = content.split(/\n\s*\n/);
+
+    // Рендеримо кожну частину як Markdown
+    const columns = parts.map((part) => {
+      return `<div>${md.render(part.trim())}</div>`;
+    });
+
+    return `<div class="grid grid-cols-1 md:grid-cols-2 gap-4">${columns.join("")}</div>`;
+  });
+
   eleventyConfig.addCollection("posts", function (collection) {
     return collection.getFilteredByTag("post").sort((a, b) => b.date - a.date);
   });
