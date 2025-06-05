@@ -27,38 +27,26 @@ NOS-аналіз показав, що люди в цілому не розумі
 
 ![Vo Wheat](/static/img/vo-wheat.jpg "Vo Wheat")
 
-{﻿% columns %}
-
+{% columns %}
 ![Vo Eggs Package](/static/img/img_9537.jpg "Vo Eggs Package")
 
-
-
 ![Vo Oats Package](/static/img/img_3741.jpg "Vo Oats Package")
-
-{﻿% endcolumns %}
+{% endcolumns %}
 
 ![Vo Typeface](/static/img/vo-type.jpg "Vo Typeface")
 
-{﻿% columns %}
-
+{% columns %}
 ![Vo Watch Concept](/static/img/vo-watch.jpg "Vo Watch Concept")
 
-
-
 ![Vo Pin](/static/img/vo-pin.jpg "Vo Pin")
-
-{﻿% endcolumns %}
+{% endcolumns %}
 
 ![Vo Cards](/static/img/typeface.jpg "Vo Cards")
 
 {﻿% columns %}
-
 ![Vo Tote Bag](/static/img/vo-shopper.jpg "Vo Tote Bag")
 
-
-
 ![Vo T-shirt](/static/img/vo-tshirt.jpg "Vo T-shirt")
-
 {﻿% endcolumns %}
 
 ![Vo Posters](/static/img/vo-posters.jpg "Vo Posters")
